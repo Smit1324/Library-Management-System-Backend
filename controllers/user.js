@@ -45,7 +45,7 @@ const signIn = async (req, res) => {
                     expires: new Date(Date.now() + 604800),
                     httpOnly: true
                 });
-                return res.status(200).send(token)
+                return res.status(200).send({ id: user._id, token })
 
             }
 
