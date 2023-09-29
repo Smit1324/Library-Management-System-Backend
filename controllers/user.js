@@ -58,7 +58,7 @@ const signIn = async (req, res) => {
 
 const signOut = (req, res) => {
     res.clearCookie("jwt", { path: '/' })
-    res.status(200).send("Logout Successful")
+    res.status(200).send({ message: "Logout Successful" })
 }
 
 const getAllUsers = async (req, res) => {
